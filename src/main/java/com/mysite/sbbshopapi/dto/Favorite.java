@@ -1,5 +1,12 @@
 package com.mysite.sbbshopapi.dto;
 
-public class Favorite {
+import lombok.Data;
 
+@Data
+public class Favorite {
+	Long userId;
+	Long productId;
+	String productName; // title
+	String productUrl;
+	String productImage;
 }
