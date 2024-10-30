@@ -3,6 +3,7 @@
       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <title>Home</title>
+    <script th:src="@{/js/app.js}" defer></script>
 </head>
 <body>
 <nav>
@@ -36,5 +37,14 @@
         <input type="submit" value="Logout"/>
     </form>
 </div>
+
+<!-- 검색 작업 영역 --> 
+
+<h1>네이버 쇼핑 검색</h1>
+
+<input type="text" id="query" placeholder="검색어를 입력하세요">
+<button onclick="searchProducts()">검색</button>
+
+<div id="results"></div>
 </body>
 </html>

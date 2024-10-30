@@ -79,20 +79,13 @@ public class HomeController {
         return "redirect:/user/%d/roles".formatted(userId);
     }
 
-    @GetMapping("/")
-    public String home() {
-        log.info("home controller...");
-        return "home";
-    }
-
-    @GetMapping("/home")
-    public String homePage() {
-        return "home";
-    }
-
     @GetMapping("/login")
     public String loginPage() {
         return "login";
     }
 
+	@GetMapping({"/", "/home"})
+	public String home() {
+		return "home";
+	}
 }
