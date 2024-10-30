@@ -26,8 +26,9 @@ public class FavoriteController {
     @Autowired
     private FavoriteService favoriteService;
 
+    // /search?query=사과
     @GetMapping("/search")
-    public List<Product> searchProducts(@RequestParam String query) {
+    public List<Product> searchProducts(@RequestParam("query") String query) {
         return naverShoppingService.searchProducts(query);
     }
 
